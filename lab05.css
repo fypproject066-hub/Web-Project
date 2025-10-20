@@ -1,0 +1,61 @@
+#one {
+    color: darkgreen;
+    text-decoration: underline;
+    text-align: center;
+}
+
+p {
+    background-color: rgb(240, 200, 150);
+    text-align: center;
+    width: 600px;
+    margin-left: 400px;
+}
+
+.item1 {
+    margin-left: 0px;
+}
+
+h2,
+p,
+li {
+    border: solid 2px rgb(200, 80, 120);
+}
+
+div > p {
+    color: teal;
+}
+
+div > ul > li {
+    color: rgb(180, 100, 220);
+}
+
+.item {
+    background-color: lightyellow;
+    font-style: italic;
+}
+
+ul li:first-child {
+    font-weight: bold;
+}
+
+a:hover {
+    color: orange;
+}
+
+p::first-letter {
+    font-size: 24px;
+    color: rgb(255, 50, 50);
+}
+
+img {
+    border: 2px solid black;
+    width: 250px;
+}
+
+ul > li {
+    width: 120px;
+}
+
+h2 {
+    width: 250px;
+}
