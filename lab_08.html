@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box with Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;  /* center horizontally */
+            align-items: center;      /* center vertically */
+            height: 100vh;            /* full screen height */
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;   /* stack items vertically */
+            align-items: center;      /* center items horizontally */
+            gap: 20px;                /* space between box and button */
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        img{
+            width: 200px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box"></div>
+        <button onclick=" toggle()"> Toggle me </button>
+        <button onclick="color()">Change color</button>
+        <button onclick="magic(this)">Magic</button>
+        <img src="https://i.imgflip.com/52bk5c.jpg" alt="magic-image">
+    </div>
+    <script>
+       var iscirecle = true;
+       var iscolor=true;
+       var ismagic = true;
+       const toggle = () => {
+    const box = document.getElementById("box")
+    if(iscirecle == false){
+        box.style.borderRadius = "0%";  // currently sets square
+    } else {
+        box.style.borderRadius = "50%"; // currently sets circle
+    }
+    iscirecle = !iscirecle;
+}
+    const color=() =>{
+        
+        const box = document.getElementById("box")
+        if (iscolor==false){
+             box.style.backgroundColor= "red"}
+        else
+            { box.style.backgroundColor= "green"}
+            iscolor=!iscolor;
+    }
+    const magic =(btn)=>{
+        const img = document.getElementsByTagName("img")[0];
+        if(ismagic==false)
+    {
+        img.style.display="none";
+
+    }
+    else{
+        img.style.display="block"
+    }
+     ismagic=!ismagic;
+    } 
+    </script>
+</body>
+</html>

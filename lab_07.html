@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 07</title>
+    <style>
+        #task1 { background-color: #f0e6ff; padding: 20px; border-radius: 8px; }
+#task2 { background-color: #f8d7da; padding: 20px; border-radius: 8px; }
+#task3 { background-color: #d1ecf1; padding: 20px; border-radius: 8px; }
+#task4 { background-color: #d4edda; padding: 20px; border-radius: 8px; }
+#task5 { background-color: #fff3cd; padding: 20px; border-radius: 8px; }
+
+/* Mobile screen override */
+@media (max-width: 600px) {
+    #task1,
+    #task2,
+    #task3,
+    #task4,
+    #task5 {
+        background-color: #e0e0e0; /* same light gray for all */
+        border-radius: 5px;
+        padding: 15px;
+    }
+}
+    </style>
+</head>
+<body>
+    
+    <h1 style="text-align: center;">lab 07</h1>
+    <div id="task1" style="text-align: center;">
+        <hr>
+        <h3>Task-1</h3>
+    <button onclick="show()" style="display: block; margin: 0 auto;" >click</button>
+       <br> <hr>
+</div>
+<div id="task2" style="text-align: center;">
+    <h3>Task-2</h3>
+    <button onclick="task2()">click</button> 
+    <br> <br>
+    <hr>
+</div>
+<div id="task3" style="text-align: center;">
+    <h3>Task-3</h3>
+    <button onclick="task3()">Click</button>
+    <br><br>
+    <hr>
+</div>
+<div id="task4" style="text-align: center;">
+    <h3>Task-4</h3>
+    <button onclick="task4()">Click</button>
+    <br><br>
+    <hr>
+</div>
+<div id="task5" style="text-align: center;">
+    <h3>Task-5</h3>
+    <button onclick="task5()">Click</button>
+    <br><br>
+    <hr>
+</div>
+   <script>
+        const show=()=>{
+            var name=prompt("enter your name: ")
+            var age=prompt("enter your age: ")
+            alert("Name: "+name + "\nAge: "+age)
+        }
+        const task2 = () => {
+    const num1 = Number(prompt("Enter num 1:"));
+    const num2 = Number(prompt("Enter num 2:"));
+
+    alert(
+        "Addition: " + (num1 + num2) +
+        "\nSubtraction: " + (num1 - num2) +
+        "\nMultiplication: " + (num1 * num2) +
+        "\nDivision: " + (num1 / num2)
+    ); }
+    const task3 = () => {
+    const num1 = Number(prompt("Enter num 1:"));
+    const num2 = Number(prompt("Enter num 2:"));
+    
+    
+    function sum(a, b) {
+        return a + b;
+    }
+
+    console.log("Sum: " + sum(num1, num2));
+}
+    const task4 = () => {
+    // Generate random number between 1 and 100
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    alert("Random Number: " + randomNumber);
+}
+const task5 = () => {
+    const name = prompt("Enter your name:");
+    alert("Hello " + name + ", welcome to the JavaScript Lab!");
+}
+    </script>
+</body>
+</html>
